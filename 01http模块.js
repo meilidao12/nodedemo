@@ -15,7 +15,7 @@ var http=require('http');
     /*
      req获取url信息   （request）
      res 浏览器返回响应信息 （response）
-     * */
+    */
 
 http.createServer(function(req,res){
     // 发送 HTTP 头部
@@ -25,4 +25,4 @@ http.createServer(function(req,res){
     res.write('你好 nodejs');
     res.write('我是第一个nodejs程序');
     res.end(); /*结束响应*/
-}).listen(8001);
+}).listen(7005);
