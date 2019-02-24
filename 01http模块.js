@@ -21,21 +21,37 @@ http.createServer(function(req,res){
     // 发送 HTTP 头部
     // HTTP 状态值: 200 : OK
     //设置 HTTP 头部，状态码是 200，文件类型是 html，字符集是 utf-8
+<<<<<<< HEAD
     res.writeHead(200,{"Content-Type":"text/html;charset='utf-8'"});
+=======
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.writeHead(200,{"Content-Type":"text/plain;charset='utf-8'"});
+
+>>>>>>> d29b6fd39b5af7bdd07dedc08b929e567cdbfc3b
     // var param = url.parse(req.url,true).pathname;
     // var lsts = param.split('/');
     // console.log(lsts[4].toString());
     // if(lsts[4].toString() == "1234")
     // {
+<<<<<<< HEAD
     //     data = {"MaterialCode":"123","Message":"查询成功","SerialNumber":"1YHP000002A4402","Type":"S"}
+=======
+        data = {"MaterialCode":"123","Message":"查询成功","SerialNumber":"1YHP000002A4402","Type":"S"}
+>>>>>>> d29b6fd39b5af7bdd07dedc08b929e567cdbfc3b
     // }
     // else
     // {
     //     data = {"MaterialCode":"","Message":"为查询到信息","SerialNumber":"1YHP000002A4402","Type":"E"}
     // }
+<<<<<<< HEAD
     // res.end(JSON.stringify(data)); /*结束响应*/
     console.log(req.url);
     res.write("你好 nodejs");
     res.end();
 }).listen(7005);
 console.log("开始监听7005端口");
+=======
+    res.end(JSON.stringify(data)); /*结束响应*/
+}).listen(7008);
+console.log("开始监听7008端口");
+>>>>>>> d29b6fd39b5af7bdd07dedc08b929e567cdbfc3b
