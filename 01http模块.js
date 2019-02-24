@@ -21,18 +21,21 @@ http.createServer(function(req,res){
     // 发送 HTTP 头部
     // HTTP 状态值: 200 : OK
     //设置 HTTP 头部，状态码是 200，文件类型是 html，字符集是 utf-8
-    res.writeHead(200,{"Content-Type":"text/plain;charset='utf-8'"});
-    var param = url.parse(req.url,true).pathname;
-    var lsts = param.split('/');
-    console.log(lsts[4].toString());
-    if(lsts[4].toString() == "1234")
-    {
-        data = {"MaterialCode":"123","Message":"查询成功","SerialNumber":"1YHP000002A4402","Type":"S"}
-    }
-    else
-    {
-        data = {"MaterialCode":"","Message":"为查询到信息","SerialNumber":"1YHP000002A4402","Type":"E"}
-    }
-    res.end(JSON.stringify(data)); /*结束响应*/
+    res.writeHead(200,{"Content-Type":"text/html;charset='utf-8'"});
+    // var param = url.parse(req.url,true).pathname;
+    // var lsts = param.split('/');
+    // console.log(lsts[4].toString());
+    // if(lsts[4].toString() == "1234")
+    // {
+    //     data = {"MaterialCode":"123","Message":"查询成功","SerialNumber":"1YHP000002A4402","Type":"S"}
+    // }
+    // else
+    // {
+    //     data = {"MaterialCode":"","Message":"为查询到信息","SerialNumber":"1YHP000002A4402","Type":"E"}
+    // }
+    // res.end(JSON.stringify(data)); /*结束响应*/
+    console.log(req.url);
+    res.write("你好 nodejs");
+    res.end();
 }).listen(7005);
 console.log("开始监听7005端口");
